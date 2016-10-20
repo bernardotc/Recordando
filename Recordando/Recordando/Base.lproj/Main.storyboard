@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -242,45 +242,102 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph4-2W-fff">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph4-2W-fff">
                                 <frame key="frameInset" minX="16" minY="192" width="169" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="chooseAnswer:" destination="5ed-3v-lOi" eventType="touchUpInside" id="0Uc-RX-8SJ"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by0-nw-LQN">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by0-nw-LQN">
                                 <frame key="frameInset" minX="190" minY="192" width="169" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="chooseAnswer:" destination="5ed-3v-lOi" eventType="touchUpInside" id="yJU-EX-3Lo"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKN-x3-P9J">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKN-x3-P9J">
                                 <frame key="frameInset" minX="16" minY="428" width="169" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="chooseAnswer:" destination="5ed-3v-lOi" eventType="touchUpInside" id="HMk-S3-IFP"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lj0-jy-THf">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lj0-jy-THf">
                                 <frame key="frameInset" minX="190" minY="428" width="169" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="chooseAnswer:" destination="5ed-3v-lOi" eventType="touchUpInside" id="Eiy-1a-db0"/>
+                                </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mz1-Ke-O98">
-                                <frame key="frameInset" minX="54" minY="154" width="266" height="467"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1v-uB-ef8">
+                                <frame key="frameInset" minX="24" minY="100" width="327" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MxA-v0-tRq">
+                                <frame key="frameInset" minX="16" minY="72" width="343" height="575"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Klc-dP-8u2">
-                                        <frame key="frameInset" minX="236" minY="47" width="22" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzD-fX-doo">
+                                        <frame key="frameInset" minX="93" minY="29" width="156" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coq-fb-gWA">
+                                        <frame key="frameInset" minY="60" width="343" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cne-nA-HiU">
+                                        <frame key="frameInset" minY="356" width="169" height="193"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Info"/>
+                                        <connections>
+                                            <segue destination="QaE-Xy-2xF" kind="popoverPresentation" identifier="popoverImageInfo" popoverAnchorView="cne-nA-HiU" id="16Z-Q8-2hi">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgf-wO-kSv">
-                                        <frame key="frameInset" minX="236" minY="284" width="22" height="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Klc-dP-8u2">
+                                        <frame key="frameInset" minX="174" minY="120" width="169" height="193"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Info"/>
+                                        <connections>
+                                            <segue destination="QaE-Xy-2xF" kind="popoverPresentation" identifier="popoverImageInfo" popoverAnchorView="Klc-dP-8u2" id="Qvu-LS-F62">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cne-nA-HiU">
-                                        <frame key="frameInset" minX="99" minY="284" width="22" height="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3h-EL-daK">
+                                        <frame key="frameInset" minY="120" width="169" height="193"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Info"/>
+                                        <connections>
+                                            <segue destination="QaE-Xy-2xF" kind="popoverPresentation" identifier="popoverImageInfo" popoverAnchorView="J3h-EL-daK" id="Qqt-6s-x6x">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3h-EL-daK">
-                                        <frame key="frameInset" minX="99" minY="47" width="22" height="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgf-wO-kSv">
+                                        <frame key="frameInset" minX="174" minY="356" width="169" height="193"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Info"/>
+                                        <connections>
+                                            <segue destination="QaE-Xy-2xF" kind="popoverPresentation" identifier="popoverImageInfo" popoverAnchorView="Bgf-wO-kSv" id="7rF-RV-7ds">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </view>
@@ -293,23 +350,71 @@
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="N1w-xv-2Yc"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="LvH-8h-ue2"/>
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="LvH-8h-ue2">
+                            <connections>
+                                <action selector="showNextSet:" destination="5ed-3v-lOi" id="uxO-de-J9E"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnLeftBottomAnswer" destination="rKN-x3-P9J" id="fzR-5q-N3v"/>
                         <outlet property="btnLeftBottomInfo" destination="cne-nA-HiU" id="3Ej-CY-BZm"/>
                         <outlet property="btnLeftTopAnswer" destination="Ph4-2W-fff" id="8fZ-LT-VWo"/>
                         <outlet property="btnLeftTopInfo" destination="J3h-EL-daK" id="z9i-04-4gn"/>
-                        <outlet property="btnRightBottomAnswer" destination="Mz1-Ke-O98" id="2jk-vm-i98"/>
+                        <outlet property="btnRightBottomAnswer" destination="Lj0-jy-THf" id="DAZ-Qk-XAH"/>
                         <outlet property="btnRightBottomInfo" destination="Bgf-wO-kSv" id="v1E-04-Bc3"/>
                         <outlet property="btnRightTopAnswer" destination="by0-nw-LQN" id="w58-5F-rlU"/>
                         <outlet property="btnRightTopInfo" destination="Klc-dP-8u2" id="7Al-zp-hMv"/>
-                        <outlet property="viewInfoButtonContainer" destination="Mz1-Ke-O98" id="imp-4v-vaG"/>
+                        <outlet property="lblCategory" destination="Coq-fb-gWA" id="nbe-60-TeW"/>
+                        <outlet property="lblInstruction" destination="y1v-uB-ef8" id="oeS-Kx-KnC"/>
+                        <outlet property="lblIsCorrect" destination="mzD-fX-doo" id="oKy-iQ-pln"/>
+                        <outlet property="viewContainer" destination="MxA-v0-tRq" id="RGQ-ab-VeO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PDX-tR-k3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2876" y="877.51124437781118"/>
+        </scene>
+        <!--Image Information View Controller-->
+        <scene sceneID="SSY-R9-xka">
+            <objects>
+                <viewController id="QaE-Xy-2xF" customClass="ImageInformationViewController" customModule="Recordando" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7NH-5v-g1M"/>
+                        <viewControllerLayoutGuide type="bottom" id="4CS-ms-wcj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TTi-CD-2OT">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripción de la foto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kk-Kw-ZHV">
+                                <frame key="frameInset" minX="67" minY="54" width="167" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsM-S4-Y89">
+                                <frame key="frameInset" minX="16" minY="137" width="268" height="226"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97454074209999997" green="1" blue="0.8533725861" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="400" height="400"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="400"/>
+                    <connections>
+                        <outlet property="lblDescription" destination="GsM-S4-Y89" id="07J-hA-Mk2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6a7-WA-gsU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3707.1999999999998" y="871.66416791604206"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gyz-H3-eXr">
@@ -355,6 +460,7 @@
         <image name="bJugar" width="921" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ljL-Hh-hEi"/>
+        <segue reference="N1w-xv-2Yc"/>
+        <segue reference="7rF-RV-7ds"/>
     </inferredMetricsTieBreakers>
 </document>
