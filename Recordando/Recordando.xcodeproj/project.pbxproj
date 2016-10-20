@@ -16,6 +16,7 @@
 		C272EADA1DAEEE120043D040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C272EAD91DAEEE120043D040 /* Assets.xcassets */; };
 		C272EADD1DAEEE120043D040 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C272EADB1DAEEE120043D040 /* LaunchScreen.storyboard */; };
 		C278649B1DB5B53E0051DEC6 /* GameImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278649A1DB5B53E0051DEC6 /* GameImagesViewController.swift */; };
+		C2F7563C1DB865AD008F313F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7563B1DB865AD008F313F /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C272EADC1DAEEE120043D040 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C272EADE1DAEEE120043D040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C278649A1DB5B53E0051DEC6 /* GameImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameImagesViewController.swift; path = Recordando/GameImagesViewController.swift; sourceTree = "<group>"; };
+		C2F7563B1DB865AD008F313F /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				C272EAD21DAEEE120043D040 /* AppDelegate.swift */,
 				C272EAD61DAEEE120043D040 /* Main.storyboard */,
+				C2F7563B1DB865AD008F313F /* AboutViewController.swift */,
 				C21C19F81DB8495B005196F8 /* HowToPlayViewController.swift */,
 				C272EAD91DAEEE120043D040 /* Assets.xcassets */,
 				C272EADB1DAEEE120043D040 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 				C278649B1DB5B53E0051DEC6 /* GameImagesViewController.swift in Sources */,
 				C272EAD31DAEEE120043D040 /* AppDelegate.swift in Sources */,
 				C21C19F91DB8495B005196F8 /* HowToPlayViewController.swift in Sources */,
+				C2F7563C1DB865AD008F313F /* AboutViewController.swift in Sources */,
 				C2050C051DB5ADD00058AF44 /* CategoryViewController.swift in Sources */,
 				C21C19F71DB82C54005196F8 /* ImageInformationViewController.swift in Sources */,
 				C2050BFF1DB5A7E60058AF44 /* MenuViewController.swift in Sources */,
