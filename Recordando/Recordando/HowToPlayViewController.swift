@@ -23,12 +23,6 @@ class HowToPlayViewController: UIViewController {
         imgViewBottomRight.image = UIImage(data: NSData(contentsOf: NSURL(string: "http://images.all-free-download.com/images/graphicthumb/tropical_beach_in_barbados_204380.jpg") as! URL) as! Data)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
     /*
     // MARK: - Navigation
 
