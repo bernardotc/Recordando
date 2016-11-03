@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9033A291DCB2260005E9458 /* netData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9033A281DCB2260005E9458 /* netData.swift */; };
 		A9BF71A01DB84DF700F4145F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF71931DB84D6B00F4145F /* Alamofire.framework */; };
 		A9BF71A11DB84DF700F4145F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF71931DB84D6B00F4145F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9BF71A91DB867F500F4145F /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BF71A81DB867F500F4145F /* Categoria.swift */; };
@@ -98,6 +99,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A9033A281DCB2260005E9458 /* netData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = netData.swift; sourceTree = "<group>"; };
 		A9BF71871DB84D6B00F4145F /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		A9BF71A81DB867F500F4145F /* Categoria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
 		A9BF71B11DB8680800F4145F /* Imagen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imagen.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				C272EAD91DAEEE120043D040 /* Assets.xcassets */,
 				C272EADB1DAEEE120043D040 /* LaunchScreen.storyboard */,
 				C272EADE1DAEEE120043D040 /* Info.plist */,
+				A9033A281DCB2260005E9458 /* netData.swift */,
 			);
 			path = Recordando;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				C223FAA81DCAF09F009C687D /* UploadViewController.swift in Sources */,
 				C278649B1DB5B53E0051DEC6 /* GameImagesViewController.swift in Sources */,
 				C223FAB11DCAF0CA009C687D /* SettingsViewController.swift in Sources */,
+				A9033A291DCB2260005E9458 /* netData.swift in Sources */,
 				C272EAD31DAEEE120043D040 /* AppDelegate.swift in Sources */,
 				A9BF71A91DB867F500F4145F /* Categoria.swift in Sources */,
 				C21C19F91DB8495B005196F8 /* HowToPlayViewController.swift in Sources */,

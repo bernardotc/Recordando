@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
-class UploadViewController: UIViewController {
+class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
+    @IBOutlet weak var imageUserPhoto: UIImageView!
+    @IBOutlet weak var pickerCategory: UIPickerView!
+    @IBOutlet weak var textDescription: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
