@@ -9,7 +9,7 @@
 import UIKit
 
 class GameImagesViewController: UIViewController, UIPopoverPresentationControllerDelegate {
-
+    
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var btnLeftTopInfo: UIButton!
     @IBOutlet weak var btnRightTopInfo: UIButton!
@@ -22,37 +22,91 @@ class GameImagesViewController: UIViewController, UIPopoverPresentationControlle
     @IBOutlet weak var lblIsCorrect: UILabel!
     @IBOutlet weak var lblCategory: UILabel!
     @IBOutlet weak var lblInstruction: UILabel!
+    @IBOutlet weak var barBtnNext: UIBarButtonItem!
     
-    // TODO: Array or dictionary of images
-    
+    var generalCategory: Categoria!
+    var images: [Imagen] = []
+    var correctImage: Imagen!
     var btnCorrectAnswer: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewContainer.isHidden = true
-        
         lblInstruction.text = "Selecciona la imagen que no va de acuerdo con las otras tres."
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         loadImages()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func loadImages() {
-        // TODO : get URL from database
-        btnLeftTopAnswer.setImage(UIImage(data: NSData(contentsOf: NSURL(string: "http://m.rgbimg.com/cache1vH5an/users/o/op/openbox/600/oncTl1E.jpg") as! URL) as! Data), for: .normal)
-        btnRightTopAnswer.setImage(UIImage(data: NSData(contentsOf: NSURL(string: "http://wall--art.com/wp-content/uploads/2014/05/caribbean_beach_wallpaper_hd_by_venomxbaby-d6qssfc.jpg") as! URL) as! Data), for: .normal)
-        btnLeftBottomAnswer.setImage(UIImage(data: NSData(contentsOf: NSURL(string: "http://m.rgbimg.com/cache1p4Bwh/users/z/ze/zela/600/mEqh9i8.jpg") as! URL) as! Data), for: .normal)
-        btnRightBottomAnswer.setImage(UIImage(data: NSData(contentsOf: NSURL(string: "http://images.all-free-download.com/images/graphicthumb/tropical_beach_in_barbados_204380.jpg") as! URL) as! Data), for: .normal)
+        barBtnNext.isEnabled = false
+        generalCategory = selectCategory()
+        selectThreeImagesFromSameCategory(category: generalCategory)
+        getImageFromDifferentCategory()
+        images.shuffle()
+        setImages()
+        // print(images)
+    }
+    
+    func selectCategory() -> Categoria {
+        let categoryCount = categorias.count
+        while true {
+            let random = Int(arc4random_uniform(UInt32(categoryCount)))
+            if categorias[random].imagenes.count >= 3 {
+                return categorias[random]
+            }
+        }
+    }
+    
+    func selectThreeImagesFromSameCategory(category: Categoria) {
+        let imageCount = category.imagenes.count
+        var threeRandomNumbers: [Int] = []
+        while threeRandomNumbers.count < 3 {
+            let random = Int(arc4random_uniform(UInt32(imageCount)))
+            if !threeRandomNumbers.contains(random) {
+                threeRandomNumbers.append(random)
+                images.append(category.imagenes[random])
+            }
+        }
+    }
+    
+    func getImageFromDifferentCategory() {
+        let categoryCount = categorias.count
+        while images.count < 4 {
+            let random = Int(arc4random_uniform(UInt32(categoryCount)))
+            if categorias[random].imagenes.count >= 1 {
+                if categorias[random].id != generalCategory.id {
+                    let index = Int(arc4random_uniform(UInt32(categorias[random].imagenes.count)))
+                    correctImage = categorias[random].imagenes[index]
+                    images.append(correctImage)
+                }
+            }
+        }
+    }
+    
+    func setImages() {
+        btnLeftTopAnswer.setImage(images[0].image, for: .normal)
+        btnRightTopAnswer.setImage(images[1].image, for: .normal)
+        btnLeftBottomAnswer.setImage(images[2].image, for: .normal)
+        btnRightBottomAnswer.setImage(images[3].image, for: .normal)
         
-        btnCorrectAnswer = btnLeftBottomAnswer
+        if correctImage.id == images[0].id {
+            btnCorrectAnswer = btnLeftTopAnswer
+        } else if correctImage.id == images[1].id {
+            btnCorrectAnswer = btnRightTopAnswer
+        } else if correctImage.id == images[2].id {
+            btnCorrectAnswer = btnLeftBottomAnswer
+        } else {
+            btnCorrectAnswer = btnRightBottomAnswer
+        }
     }
     
     @IBAction func chooseAnswer(_ sender: UIButton) {
+        barBtnNext.isEnabled = true
         viewContainer.isHidden = false
         lblInstruction.isHidden = true
         btnLeftTopAnswer.alpha = 0.4
@@ -64,15 +118,22 @@ class GameImagesViewController: UIViewController, UIPopoverPresentationControlle
         } else {
             lblIsCorrect.text = "Incorrecto!"
         }
-        lblCategory.text = "La categoría era: Playa."
+        lblCategory.text = "La categoría era: \(generalCategory.nombre!)."
     }
     
     @IBAction func showNextSet(_ sender: AnyObject) {
-        // TODO!
+        viewContainer.isHidden = true
+        images = []
+        loadImages()
+        lblInstruction.isHidden = false
+        btnLeftTopAnswer.alpha = 1
+        btnRightTopAnswer.alpha = 1
+        btnLeftBottomAnswer.alpha = 1
+        btnRightBottomAnswer.alpha = 1
     }
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "popoverImageInfo" {
@@ -81,13 +142,13 @@ class GameImagesViewController: UIViewController, UIPopoverPresentationControlle
             let button = sender as! UIButton
             
             if button == btnLeftTopInfo {
-                view.imageDescription = "Esta es la foto de la playa que tome ayer."
+                view.imageDescription = images[0].descripcion
             } else if button == btnRightTopInfo {
-                view.imageDescription = "Recuerdo que la playa de Cancún es de las mejores. Se le conoce como una de las mejores playas del mundo."
+                view.imageDescription = images[1].descripcion
             } else if button == btnLeftBottomInfo {
-                view.imageDescription = "El bosque del Amazones se ubica Brasil y tiene una flora y fauna muy variada."
+                view.imageDescription = images[2].descripcion
             } else {
-                view.imageDescription = "En el mar, la vida es más sabrosa."
+                view.imageDescription = images[3].descripcion
             }
             
             view.modalPresentationStyle = .popover
@@ -98,5 +159,20 @@ class GameImagesViewController: UIViewController, UIPopoverPresentationControlle
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
     }
+    
+}
 
+extension MutableCollection where Indices.Iterator.Element == Index {
+    /// Shuffles the contents of this collection.
+    mutating func shuffle() {
+        let c = count
+        guard c > 1 else { return }
+        
+        for (unshuffledCount, firstUnshuffled) in zip(stride(from: c, to: 1, by: -1), indices) {
+            let d: IndexDistance = numericCast(arc4random_uniform(numericCast(unshuffledCount)))
+            guard d != 0 else { continue }
+            let i = index(firstUnshuffled, offsetBy: d)
+            swap(&self[firstUnshuffled], &self[i])
+        }
+    }
 }
