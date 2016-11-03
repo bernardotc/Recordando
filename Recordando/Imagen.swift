@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Imagen {
+class Imagen: CustomStringConvertible {
     
     var id: Int?
     var fileName: String?
@@ -24,6 +24,10 @@ class Imagen {
         if let url = NSURL(string: "http://35.160.114.150/recordando/img/\(fileName).jpg"), let data = NSData(contentsOf: url as URL), let image = UIImage(data: data as Data) {
             self.image = image
         }
+    }
+    
+    var description: String {
+        return "fileName: \(fileName), image: \(image)"
     }
     
 }

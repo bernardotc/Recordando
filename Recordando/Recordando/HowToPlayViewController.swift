@@ -17,10 +17,14 @@ class HowToPlayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imgViewTopLeft.image = UIImage(data: NSData(contentsOf: NSURL(string: "http://m.rgbimg.com/cache1vH5an/users/o/op/openbox/600/oncTl1E.jpg") as! URL) as! Data)
-        imgViewTopRight.image = UIImage(data: NSData(contentsOf: NSURL(string: "http://wall--art.com/wp-content/uploads/2014/05/caribbean_beach_wallpaper_hd_by_venomxbaby-d6qssfc.jpg") as! URL) as! Data)
-        imgViewBottomLeft.image = UIImage(data: NSData(contentsOf: NSURL(string: "http://m.rgbimg.com/cache1p4Bwh/users/z/ze/zela/600/mEqh9i8.jpg") as! URL) as! Data)
-        imgViewBottomRight.image = UIImage(data: NSData(contentsOf: NSURL(string: "http://images.all-free-download.com/images/graphicthumb/tropical_beach_in_barbados_204380.jpg") as! URL) as! Data)
+        
+        let category = categorias[0]
+        
+        imgViewTopLeft.image = category.imagenes[0].image
+        imgViewTopRight.image = category.imagenes[1].image
+        imgViewBottomLeft.image = category.imagenes[2].image
+        imgViewBottomRight.image = category.imagenes[3].image
+
     }
 
     /*

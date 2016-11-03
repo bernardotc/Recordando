@@ -366,6 +366,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="barBtnNext" destination="LvH-8h-ue2" id="hkG-kZ-JaE"/>
                         <outlet property="btnLeftBottomAnswer" destination="rKN-x3-P9J" id="fzR-5q-N3v"/>
                         <outlet property="btnLeftBottomInfo" destination="cne-nA-HiU" id="3Ej-CY-BZm"/>
                         <outlet property="btnLeftTopAnswer" destination="Ph4-2W-fff" id="8fZ-LT-VWo"/>
