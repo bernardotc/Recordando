@@ -6,6 +6,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Upload View Controller-->
+        <scene sceneID="Mxb-00-FbD">
+            <objects>
+                <viewController id="yty-LZ-IUK" customClass="UploadViewController" customModule="Recordando" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PzA-9k-ihA"/>
+                        <viewControllerLayoutGuide type="bottom" id="5lf-GN-2JW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m4j-kf-Mck">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpG-ad-4nV">
+                                <frame key="frameInset" minX="16" minY="28" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Regresar"/>
+                                <connections>
+                                    <segue destination="nfy-am-Rs9" kind="unwind" unwindAction="unwindUploadWithSender:" id="Sh0-WN-TBP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.59565751749999996" blue="0.90484117350000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4q-DL-5KC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nfy-am-Rs9" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1103" y="134"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -27,7 +56,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Jugar" image="bJugar"/>
                                 <connections>
-                                    <segue destination="Mgi-Gm-qzk" kind="presentation" id="dYh-1c-lri"/>
+                                    <segue destination="c6K-49-HEK" kind="presentation" id="Pb4-lt-fL9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZK-12-nCx">
@@ -60,6 +89,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KK-7g-6QC">
+                                <frame key="frameInset" minX="292" minY="629" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Subir foto"/>
+                                <connections>
+                                    <segue destination="yty-LZ-IUK" kind="presentation" id="hx9-Pt-NLA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2l-XY-A4K">
+                                <frame key="frameInset" minX="16" minY="629" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Configuración"/>
+                                <connections>
+                                    <segue destination="wbj-ZH-caU" kind="presentation" id="xWG-b7-6Yp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.94509803921568625" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -208,10 +253,10 @@
             </objects>
             <point key="canvasLocation" x="397.60000000000002" y="897.30134932533736"/>
         </scene>
-        <!--Category View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="vHY-BZ-zlJ">
             <objects>
-                <viewController id="wbj-ZH-caU" customClass="CategoryViewController" customModule="Recordando" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wbj-ZH-caU" customClass="SettingsViewController" customModule="Recordando" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9hU-Kf-2XG"/>
                         <viewControllerLayoutGuide type="bottom" id="gqv-ab-h7s"/>
@@ -219,7 +264,17 @@
                     <view key="view" contentMode="scaleToFill" id="b2I-bt-PiX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLK-kb-ZyR">
+                                <frame key="frameInset" minX="16" minY="20" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Regresar"/>
+                                <connections>
+                                    <segue destination="LJd-3k-p7y" kind="unwind" unwindAction="unwindSettingsWithSender:" id="IsK-dr-6fG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97454074209999997" green="1" blue="0.8533725861" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="TbB-fl-jo1">
                         <barButtonItem key="leftBarButtonItem" title="Inicio" id="raI-Yj-GDv">
@@ -227,17 +282,13 @@
                                 <segue destination="LJd-3k-p7y" kind="unwind" unwindAction="unwindCategoryWithSender:" id="iO2-QY-5BF"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="lnR-N5-V6b">
-                            <connections>
-                                <segue destination="c6K-49-HEK" kind="show" id="EZz-rS-dHO"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="lnR-N5-V6b"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4k-Yq-Ab5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LJd-3k-p7y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1936.8" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-1102" y="896"/>
         </scene>
         <!--Game Images View Controller-->
         <scene sceneID="eKU-h1-D4p">
@@ -384,7 +435,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PDX-tR-k3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fkt-6m-JeU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2876" y="877.51124437781118"/>
+            <point key="canvasLocation" x="1746" y="134"/>
         </scene>
         <!--Image Information View Controller-->
         <scene sceneID="SSY-R9-xka">
@@ -425,25 +476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6a7-WA-gsU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3707.1999999999998" y="871.66416791604206"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Gyz-H3-eXr">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mgi-Gm-qzk" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8JV-HX-ayG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="wbj-ZH-caU" kind="relationship" relationship="rootViewController" id="c92-ej-lcf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uoa-qk-c6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="997.60000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2798" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZRE-1s-16V">
@@ -461,7 +494,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dij-ST-U7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936.8" y="877.51124437781118"/>
+            <point key="canvasLocation" x="879" y="134"/>
         </scene>
     </scenes>
     <resources>

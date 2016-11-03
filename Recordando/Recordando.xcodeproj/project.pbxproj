@@ -12,9 +12,10 @@
 		A9BF71A91DB867F500F4145F /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BF71A81DB867F500F4145F /* Categoria.swift */; };
 		A9BF71B21DB8680800F4145F /* Imagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BF71B11DB8680800F4145F /* Imagen.swift */; };
 		C2050BFF1DB5A7E60058AF44 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2050BFE1DB5A7E60058AF44 /* MenuViewController.swift */; };
-		C2050C051DB5ADD00058AF44 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2050C041DB5ADD00058AF44 /* CategoryViewController.swift */; };
 		C21C19F71DB82C54005196F8 /* ImageInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21C19F61DB82C54005196F8 /* ImageInformationViewController.swift */; };
 		C21C19F91DB8495B005196F8 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21C19F81DB8495B005196F8 /* HowToPlayViewController.swift */; };
+		C223FAA81DCAF09F009C687D /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C223FAA71DCAF09F009C687D /* UploadViewController.swift */; };
+		C223FAB11DCAF0CA009C687D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C223FAB01DCAF0CA009C687D /* SettingsViewController.swift */; };
 		C272EAD31DAEEE120043D040 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272EAD21DAEEE120043D040 /* AppDelegate.swift */; };
 		C272EAD81DAEEE120043D040 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C272EAD61DAEEE120043D040 /* Main.storyboard */; };
 		C272EADA1DAEEE120043D040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C272EAD91DAEEE120043D040 /* Assets.xcassets */; };
@@ -101,9 +102,10 @@
 		A9BF71A81DB867F500F4145F /* Categoria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
 		A9BF71B11DB8680800F4145F /* Imagen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imagen.swift; sourceTree = "<group>"; };
 		C2050BFE1DB5A7E60058AF44 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Recordando/MenuViewController.swift; sourceTree = "<group>"; };
-		C2050C041DB5ADD00058AF44 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = Recordando/CategoryViewController.swift; sourceTree = "<group>"; };
 		C21C19F61DB82C54005196F8 /* ImageInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageInformationViewController.swift; path = Recordando/ImageInformationViewController.swift; sourceTree = "<group>"; };
 		C21C19F81DB8495B005196F8 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
+		C223FAA71DCAF09F009C687D /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		C223FAB01DCAF0CA009C687D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Recordando/SettingsViewController.swift; sourceTree = "<group>"; };
 		C272EACF1DAEEE120043D040 /* Recordando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recordando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C272EAD21DAEEE120043D040 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C272EAD71DAEEE120043D040 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,13 +145,13 @@
 		C272EAC61DAEEE110043D040 = {
 			isa = PBXGroup;
 			children = (
+				C223FAB01DCAF0CA009C687D /* SettingsViewController.swift */,
 				A9BF71871DB84D6B00F4145F /* Alamofire.xcodeproj */,
 				C21C19F61DB82C54005196F8 /* ImageInformationViewController.swift */,
 				C278649A1DB5B53E0051DEC6 /* GameImagesViewController.swift */,
 				A9BF71A81DB867F500F4145F /* Categoria.swift */,
 				C2050BFE1DB5A7E60058AF44 /* MenuViewController.swift */,
 				A9BF71B11DB8680800F4145F /* Imagen.swift */,
-				C2050C041DB5ADD00058AF44 /* CategoryViewController.swift */,
 				C272EAD11DAEEE120043D040 /* Recordando */,
 				C272EAD01DAEEE120043D040 /* Products */,
 			);
@@ -168,6 +170,7 @@
 			children = (
 				C272EAD21DAEEE120043D040 /* AppDelegate.swift */,
 				C272EAD61DAEEE120043D040 /* Main.storyboard */,
+				C223FAA71DCAF09F009C687D /* UploadViewController.swift */,
 				C2F7563B1DB865AD008F313F /* AboutViewController.swift */,
 				C21C19F81DB8495B005196F8 /* HowToPlayViewController.swift */,
 				C272EAD91DAEEE120043D040 /* Assets.xcassets */,
@@ -310,12 +313,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9BF71B21DB8680800F4145F /* Imagen.swift in Sources */,
+				C223FAA81DCAF09F009C687D /* UploadViewController.swift in Sources */,
 				C278649B1DB5B53E0051DEC6 /* GameImagesViewController.swift in Sources */,
+				C223FAB11DCAF0CA009C687D /* SettingsViewController.swift in Sources */,
 				C272EAD31DAEEE120043D040 /* AppDelegate.swift in Sources */,
 				A9BF71A91DB867F500F4145F /* Categoria.swift in Sources */,
 				C21C19F91DB8495B005196F8 /* HowToPlayViewController.swift in Sources */,
 				C2F7563C1DB865AD008F313F /* AboutViewController.swift in Sources */,
-				C2050C051DB5ADD00058AF44 /* CategoryViewController.swift in Sources */,
 				C21C19F71DB82C54005196F8 /* ImageInformationViewController.swift in Sources */,
 				C2050BFF1DB5A7E60058AF44 /* MenuViewController.swift in Sources */,
 			);

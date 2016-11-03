@@ -1,14 +1,14 @@
 //
-//  CategoryViewController.swift
+//  SettingsViewController.swift
 //  Recordando
 //
-//  Created by Bernardo Trevino on 10/17/16.
+//  Created by Bernardo Trevino on 11/2/16.
 //  Copyright © 2016 bernardo. All rights reserved.
 //
 
 import UIKit
 
-class CategoryViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
