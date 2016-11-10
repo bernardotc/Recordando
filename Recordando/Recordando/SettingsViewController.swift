@@ -43,18 +43,15 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             if categorias[0].usar {
-                print ("hola")
                 for index in 0..<categorias.count {
                     categorias[index].usar = false
                 }
             } else {
-                print ("false")
                 for index in 0..<categorias.count {
                     categorias[index].usar = true
                 }
             }
         } else if !categorias[0].usar {
-            print ("adios")
             categorias[indexPath.row].usar = !categorias[indexPath.row].usar
             var all = true
             for index in 1..<categorias.count {

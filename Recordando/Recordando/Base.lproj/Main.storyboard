@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7RN-Qa-UoU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -34,6 +34,47 @@
                 <exit id="nfy-am-Rs9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1103" y="134"/>
+        </scene>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="umH-AS-4Qi">
+            <objects>
+                <viewController id="7RN-Qa-UoU" customClass="LaunchScreenViewController" customModule="Recordando" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hmd-P9-ww0"/>
+                        <viewControllerLayoutGuide type="bottom" id="l6F-up-vCb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1h1-mn-ufM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="los3amigosLogo" translatesAutoresizingMaskIntoConstraints="NO" id="w2I-oq-ibB">
+                                <frame key="frameInset" minX="67" minY="187" width="240" height="246"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="apb-QM-PnB">
+                                <frame key="frameInset" minX="177" minY="580" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cargando" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7X-of-OFH">
+                                <frame key="frameInset" minX="150" minY="551" width="75" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="apb-QM-PnB" id="J0S-4M-qXP"/>
+                        <outlet property="imageView" destination="w2I-oq-ibB" id="log-Lg-si6"/>
+                        <outlet property="lblLoading" destination="E7X-of-OFH" id="so7-eh-3Ad"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToMainMenu" id="msm-Lw-JvO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OhR-tz-OtE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="-623.83808095952031"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -533,6 +574,7 @@
         <image name="bComoJugar" width="921" height="126"/>
         <image name="bInformación" width="921" height="126"/>
         <image name="bJugar" width="921" height="126"/>
+        <image name="los3amigosLogo" width="315" height="259"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7rF-RV-7ds"/>

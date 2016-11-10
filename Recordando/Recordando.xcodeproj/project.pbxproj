@@ -16,6 +16,7 @@
 		C21C19F91DB8495B005196F8 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21C19F81DB8495B005196F8 /* HowToPlayViewController.swift */; };
 		C223FAA81DCAF09F009C687D /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C223FAA71DCAF09F009C687D /* UploadViewController.swift */; };
 		C223FAB11DCAF0CA009C687D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C223FAB01DCAF0CA009C687D /* SettingsViewController.swift */; };
+		C261E3121DD4B32F00F7A68B /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C261E3111DD4B32F00F7A68B /* LaunchScreenViewController.swift */; };
 		C272EAD31DAEEE120043D040 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C272EAD21DAEEE120043D040 /* AppDelegate.swift */; };
 		C272EAD81DAEEE120043D040 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C272EAD61DAEEE120043D040 /* Main.storyboard */; };
 		C272EADA1DAEEE120043D040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C272EAD91DAEEE120043D040 /* Assets.xcassets */; };
@@ -107,6 +108,7 @@
 		C21C19F81DB8495B005196F8 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
 		C223FAA71DCAF09F009C687D /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		C223FAB01DCAF0CA009C687D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Recordando/SettingsViewController.swift; sourceTree = "<group>"; };
+		C261E3111DD4B32F00F7A68B /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		C272EACF1DAEEE120043D040 /* Recordando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recordando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C272EAD21DAEEE120043D040 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C272EAD71DAEEE120043D040 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				C272EAD21DAEEE120043D040 /* AppDelegate.swift */,
 				C272EAD61DAEEE120043D040 /* Main.storyboard */,
+				C261E3111DD4B32F00F7A68B /* LaunchScreenViewController.swift */,
 				C223FAA71DCAF09F009C687D /* UploadViewController.swift */,
 				C2F7563B1DB865AD008F313F /* AboutViewController.swift */,
 				C21C19F81DB8495B005196F8 /* HowToPlayViewController.swift */,
@@ -326,6 +329,7 @@
 				C21C19F91DB8495B005196F8 /* HowToPlayViewController.swift in Sources */,
 				C2F7563C1DB865AD008F313F /* AboutViewController.swift in Sources */,
 				C21C19F71DB82C54005196F8 /* ImageInformationViewController.swift in Sources */,
+				C261E3121DD4B32F00F7A68B /* LaunchScreenViewController.swift in Sources */,
 				C2050BFF1DB5A7E60058AF44 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
