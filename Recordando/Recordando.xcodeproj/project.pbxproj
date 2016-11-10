@@ -21,6 +21,7 @@
 		C272EADA1DAEEE120043D040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C272EAD91DAEEE120043D040 /* Assets.xcassets */; };
 		C272EADD1DAEEE120043D040 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C272EADB1DAEEE120043D040 /* LaunchScreen.storyboard */; };
 		C278649B1DB5B53E0051DEC6 /* GameImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278649A1DB5B53E0051DEC6 /* GameImagesViewController.swift */; };
+		C2E506241DCB8267001911CA /* CategorySettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E506231DCB8267001911CA /* CategorySettingsTableViewCell.swift */; };
 		C2F7563C1DB865AD008F313F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F7563B1DB865AD008F313F /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		C272EADC1DAEEE120043D040 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C272EADE1DAEEE120043D040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C278649A1DB5B53E0051DEC6 /* GameImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameImagesViewController.swift; path = Recordando/GameImagesViewController.swift; sourceTree = "<group>"; };
+		C2E506231DCB8267001911CA /* CategorySettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategorySettingsTableViewCell.swift; path = Recordando/CategorySettingsTableViewCell.swift; sourceTree = "<group>"; };
 		C2F7563B1DB865AD008F313F /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				C223FAB01DCAF0CA009C687D /* SettingsViewController.swift */,
+				C2E506231DCB8267001911CA /* CategorySettingsTableViewCell.swift */,
 				A9BF71871DB84D6B00F4145F /* Alamofire.xcodeproj */,
 				C21C19F61DB82C54005196F8 /* ImageInformationViewController.swift */,
 				C278649A1DB5B53E0051DEC6 /* GameImagesViewController.swift */,
@@ -214,6 +217,7 @@
 				TargetAttributes = {
 					C272EACE1DAEEE110043D040 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 3FDNUZNKF2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -313,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9BF71B21DB8680800F4145F /* Imagen.swift in Sources */,
+				C2E506241DCB8267001911CA /* CategorySettingsTableViewCell.swift in Sources */,
 				C223FAA81DCAF09F009C687D /* UploadViewController.swift in Sources */,
 				C278649B1DB5B53E0051DEC6 /* GameImagesViewController.swift in Sources */,
 				C223FAB11DCAF0CA009C687D /* SettingsViewController.swift in Sources */,
@@ -451,7 +456,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3FDNUZNKF2;
 				INFOPLIST_FILE = Recordando/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LosAmigos.com.Recordando;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -464,7 +471,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3FDNUZNKF2;
 				INFOPLIST_FILE = Recordando/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LosAmigos.com.Recordando;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -13,6 +13,7 @@ class Categoria {
     var id: Int?
     var nombre: String?
     var imagenes: [Imagen] = []
+    var usar: Bool = true
     
     init(id: Int, nombre: String) {
         self.id = id
