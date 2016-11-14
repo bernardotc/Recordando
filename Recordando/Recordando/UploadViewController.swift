@@ -93,21 +93,21 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     
     func showPhotoMenu(sender: AnyObject) {
     
-    let alertController = UIAlertController(title: nil, message: nil,preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: nil, message: nil,preferredStyle: .actionSheet)
     
-    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
     
-    alertController.addAction(cancelAction)
+        alertController.addAction(cancelAction)
     
-    let takePhotoAction = UIAlertAction(title: "Take Photo",style: .default, handler: { _ in self.takePhotoWithCamera()})
+        let takePhotoAction = UIAlertAction(title: "Take Photo",style: .default, handler: { _ in self.takePhotoWithCamera()})
     
-    alertController.addAction(takePhotoAction)
+        alertController.addAction(takePhotoAction)
     
-    let chooseFromLibraryAction = UIAlertAction(title:"Choose From Library", style: .default, handler:{ _ in self.choosePhotoFromLibrary()})
+        let chooseFromLibraryAction = UIAlertAction(title:"Choose From Library", style: .default, handler:{ _ in self.choosePhotoFromLibrary()})
     
-    alertController.addAction(chooseFromLibraryAction)
+        alertController.addAction(chooseFromLibraryAction)
     
-    present(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
 
     
