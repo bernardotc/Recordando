@@ -15,6 +15,8 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     @IBOutlet weak var pickerCategory: UIPickerView!
     @IBOutlet weak var textDescription: UITextView!
     
+    var currentPickerText: String = ""
+    
     var sCategoryTemporal: [String] = ["Música de Época", "Objetos de Época", "Juguetes", "Comerciales", "Hechos Históricos", "Monumentos Mexicanos", "Arte", "Cinematografía", "Comida Mexicana", "Paisaje"]
     
     override func viewDidLoad() {
@@ -40,69 +42,27 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     
     @IBAction func uploadBtn(sender: AnyObject) {
         
-        //let image = UIImage(named: "ios9.jpg")
-        let image : NSData = UIImageJPEGRepresentation(imageUserPhoto.image!, 32)! as NSData
+        let sCategorySelected: String = sCategoryTemporal[pickerCategory.selectedRow(inComponent: 0)]
         
-        let parameters = [
-            "pic" : NetData(data: image, mimeType: .ImageJpeg, filename: "customName.jpg"),
-            "otherParm": "Value"
-        ] as [String : Any]
+        let imageSelected: UIImage = imageUserPhoto.image!
+        let imageData = UIImageJPEGRepresentation(imageSelected, 0.9)
+        let base64String = imageData?.base64EncodedString() // encode the image
+
+        let sUserDescription = textDescription.text
         
-        let urlRequest = self.urlRequestWithComponents(urlString: "http://35.160.114.150/recordando/model.php", parameters: parameters as NSDictionary)
+        let parameters: Parameters = [
+            "category": sCategorySelected,
+            "data": "UPLOAD_IMAGE",
+            "image": base64String,
+            "description": sUserDescription
+        ]
         
-        Alamofire.upload(urlRequest.0, data: urlRequest.1)
-            .progress { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
-                print("\(totalBytesWritten) / \(totalBytesExpectedToWrite)")
-            }
-            .responseJSON { response in
-                debugPrint(response)
+        Alamofire.request("35.160.114.150/recordando/controller.php", method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
+            
         }
+
     }
     
-    
-    func urlRequestWithComponents(urlString:String, parameters:NSDictionary) -> (URLRequestConvertible, NSData) {
-        
-        // create url request to send
-        let mutableURLRequest = NSMutableURLRequest(url: NSURL(string: urlString)! as URL)
-        mutableURLRequest.HTTPMethod = Alamofire.Method.POST.rawValue
-        //let boundaryConstant = "myRandomBoundary12345"
-        let boundaryConstant = "NET-POST-boundary-\(arc4random())-\(arc4random())"
-        let contentType = "multipart/form-data;boundary="+boundaryConstant
-        mutableURLRequest.setValue(contentType, forHTTPHeaderField: "Content-Type")
-        
-        
-        // create upload data to send
-        let uploadData = NSMutableData()
-        
-        // add parameters
-        for (key, value) in parameters {
-            
-            uploadData.append("\r\n--\(boundaryConstant)\r\n".data(using: String.Encoding.utf8)!)
-            
-            if value is NetData {
-                // add image
-                let postData = value as! NetData
-            
-                let filenameClause = " filename=\"\(postData.filename)\""
-                let contentDispositionString = "Content-Disposition: form-data; name=\"\(key)\";\(filenameClause)\r\n"
-                let contentDispositionData = contentDispositionString.data(using: String.Encoding.utf8)
-                uploadData.append(contentDispositionData!)
-                
-                let contentTypeString = "Content-Type: \(postData.mimeType.getString())\r\n\r\n"
-                let contentTypeData = contentTypeString.data(using: String.Encoding.utf8)
-                uploadData.append(contentTypeData!)
-                uploadData.append(postData.data as Data)
-                
-            }else{
-                uploadData.append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n\(value)".data(using: String.Encoding.utf8)!)
-            }
-        }
-        uploadData.append("\r\n--\(boundaryConstant)--\r\n".data(using: String.Encoding.utf8)!)
-        
-        
-        // return URLRequestConvertible and NSData
-        return (Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: nil).0, uploadData)
-    }
     
     
     //MARK: - Camera and Gallery
@@ -162,11 +122,11 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         return sCategoryTemporal.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return sCategoryTemporal[row]
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     }
 
     /*
