@@ -52,7 +52,7 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         
         let parameters: Parameters = [
             "category": sCategorySelected,
-            "data": "UPLOAD_IMAGE",
+            "action": "UPLOAD_IMAGE",
             "image": base64String,
             "description": sUserDescription
         ]
