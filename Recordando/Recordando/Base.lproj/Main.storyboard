@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7RN-Qa-UoU">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7RN-Qa-UoU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5lf-GN-2JW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="m4j-kf-Mck">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpG-ad-4nV">
@@ -36,7 +36,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4q-DL-5KC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nfy-am-Rs9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1103" y="134"/>
+            <point key="canvasLocation" x="-399" y="1017"/>
         </scene>
         <!--Launch Screen View Controller-->
         <scene sceneID="umH-AS-4Qi">
@@ -47,26 +47,32 @@
                         <viewControllerLayoutGuide type="bottom" id="l6F-up-vCb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1h1-mn-ufM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="los3amigosLogo" translatesAutoresizingMaskIntoConstraints="NO" id="w2I-oq-ibB">
-                                <frame key="frameInset" minX="67" minY="187" width="240" height="246"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="apb-QM-PnB">
-                                <frame key="frameInset" minX="177" minY="580" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cargando" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7X-of-OFH">
-                                <frame key="frameInset" minX="150" minY="551" width="75" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="apb-QM-PnB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="E7X-of-OFH">
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="los3amigosLogo" translatesAutoresizingMaskIntoConstraints="NO" id="w2I-oq-ibB"/>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w2I-oq-ibB" firstAttribute="height" secondItem="1h1-mn-ufM" secondAttribute="height" multiplier="30%" id="6tc-zK-flf"/>
+                            <constraint firstItem="w2I-oq-ibB" firstAttribute="centerY" secondItem="1h1-mn-ufM" secondAttribute="centerY" id="7eI-Ga-Nsf"/>
+                            <constraint firstItem="apb-QM-PnB" firstAttribute="height" secondItem="1h1-mn-ufM" secondAttribute="height" multiplier="3%" id="96a-hp-i1P"/>
+                            <constraint firstItem="E7X-of-OFH" firstAttribute="width" secondItem="1h1-mn-ufM" secondAttribute="width" multiplier="20%" id="Nd5-DS-gl9"/>
+                            <constraint firstItem="w2I-oq-ibB" firstAttribute="centerX" secondItem="1h1-mn-ufM" secondAttribute="centerX" id="R7M-4P-VC6"/>
+                            <constraint firstItem="l6F-up-vCb" firstAttribute="top" secondItem="apb-QM-PnB" secondAttribute="bottom" constant="115" id="TN9-Fc-jdd"/>
+                            <constraint firstItem="E7X-of-OFH" firstAttribute="height" secondItem="1h1-mn-ufM" secondAttribute="height" multiplier="5%" id="YDd-Il-Dge"/>
+                            <constraint firstItem="apb-QM-PnB" firstAttribute="centerX" secondItem="1h1-mn-ufM" secondAttribute="centerX" id="a57-tY-Hjf"/>
+                            <constraint firstItem="apb-QM-PnB" firstAttribute="width" secondItem="1h1-mn-ufM" secondAttribute="width" multiplier="5.3%" id="fPq-ga-7wn"/>
+                            <constraint firstItem="E7X-of-OFH" firstAttribute="centerX" secondItem="1h1-mn-ufM" secondAttribute="centerX" id="o9r-Dh-Sfj"/>
+                            <constraint firstItem="w2I-oq-ibB" firstAttribute="width" secondItem="1h1-mn-ufM" secondAttribute="width" multiplier="63%" id="pIB-kO-jw9"/>
+                            <constraint firstItem="apb-QM-PnB" firstAttribute="top" secondItem="E7X-of-OFH" secondAttribute="bottom" constant="10" id="w9V-Ga-OMl"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="apb-QM-PnB" id="J0S-4M-qXP"/>
@@ -77,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhR-tz-OtE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="-623.83808095952031"/>
+            <point key="canvasLocation" x="42.399999999999999" y="-727.28635682158927"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -88,7 +94,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nu-8x-uHm">
@@ -97,7 +103,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="PYK-9p-Ted"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="Z8W-I2-FCk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Jugar"/>
                                 <connections>
                                     <segue destination="c6K-49-HEK" kind="presentation" id="Pb4-lt-fL9"/>
@@ -109,7 +115,7 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="81A-nG-yTA"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Nzb-fy-JjM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Información"/>
                                 <connections>
                                     <segue destination="Isl-jV-j77" kind="presentation" id="deS-JG-jAO"/>
@@ -121,7 +127,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="8Pv-cz-Yna"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="wFh-AZ-Pqg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Cómo jugar"/>
                                 <connections>
                                     <segue destination="w2k-py-2VY" kind="presentation" id="EPO-Ya-Zox"/>
@@ -210,7 +216,7 @@
                         <viewControllerLayoutGuide type="bottom" id="R4d-pF-Iom"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="62r-L2-cKb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El juego es simple:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSZ-Xq-YgT">
@@ -299,7 +305,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5z-4A-hWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4cj-aw-0eX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-338.39999999999998" y="896.40179910044981"/>
+            <point key="canvasLocation" x="414" y="1017"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="Xby-JW-dH0">
@@ -310,7 +316,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4ZU-M8-5H5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8e7-FX-11a">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recordando es una aplicación que se enfoca en beneficiar la actividad cognitiva y emocional de la persona." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNd-Ux-5yO">
@@ -390,7 +396,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Jq-rB-s3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="U0v-bi-L1q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="397.60000000000002" y="897.30134932533736"/>
+            <point key="canvasLocation" x="885" y="963"/>
         </scene>
         <!--About Legal View Controller-->
         <scene sceneID="yli-ah-eRp">
@@ -401,10 +407,10 @@
                         <viewControllerLayoutGuide type="bottom" id="Wmm-5l-gQS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uoo-k5-WeW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXM-pb-3hv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXM-pb-3hv">
                                 <string key="text">Recordando ha sido desarrollado por estudiantes del Tecnológico de Monterrey durante el semestre Agosto Diciembre de 2016, como parte del curso Desarrollo de Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez Treviño.
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -420,7 +426,7 @@ Gerardo Tenorio</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recordando se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egD-OL-LSo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recordando se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egD-OL-LSo">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -462,7 +468,7 @@ Gerardo Tenorio</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYL-NW-ggV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YSH-ZP-hdU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1149.5999999999999" y="896.40179910044981"/>
+            <point key="canvasLocation" x="1400" y="963"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="vHY-BZ-zlJ">
@@ -473,7 +479,7 @@ Gerardo Tenorio</string>
                         <viewControllerLayoutGuide type="bottom" id="gqv-ab-h7s"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="b2I-bt-PiX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLK-kb-ZyR">
@@ -530,7 +536,7 @@ Gerardo Tenorio</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4k-Yq-Ab5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LJd-3k-p7y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1103.2" y="895.50224887556226"/>
+            <point key="canvasLocation" x="-921" y="963"/>
         </scene>
         <!--Game Images View Controller-->
         <scene sceneID="eKU-h1-D4p">
@@ -541,7 +547,7 @@ Gerardo Tenorio</string>
                         <viewControllerLayoutGuide type="bottom" id="i6F-R5-Ojc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ALd-4q-swq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph4-2W-fff">
@@ -718,7 +724,7 @@ Gerardo Tenorio</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6a7-WA-gsU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2798" y="133"/>
+            <point key="canvasLocation" x="2439" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZRE-1s-16V">
@@ -736,16 +742,13 @@ Gerardo Tenorio</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dij-ST-U7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879" y="134"/>
+            <point key="canvasLocation" x="1192" y="133"/>
         </scene>
     </scenes>
     <resources>
         <image name="Logo_sin_fondo" width="900" height="900"/>
         <image name="bCamara" width="101" height="73"/>
         <image name="bConfiguracion" width="192" height="192"/>
-        <image name="bComoJugar" width="921" height="126"/>
-        <image name="bInformación" width="921" height="126"/>
-        <image name="bJugar" width="921" height="126"/>
         <image name="los3amigosLogo" width="315" height="259"/>
     </resources>
     <inferredMetricsTieBreakers>
