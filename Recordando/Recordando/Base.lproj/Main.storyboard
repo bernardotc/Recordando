@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5lf-GN-2JW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="m4j-kf-Mck">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpG-ad-4nV">
@@ -36,7 +36,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C4q-DL-5KC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nfy-am-Rs9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-399" y="1017"/>
+            <point key="canvasLocation" x="-591" y="1017"/>
         </scene>
         <!--Launch Screen View Controller-->
         <scene sceneID="umH-AS-4Qi">
@@ -47,11 +47,11 @@
                         <viewControllerLayoutGuide type="bottom" id="l6F-up-vCb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1h1-mn-ufM">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="apb-QM-PnB"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="E7X-of-OFH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="E7X-of-OFH">
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -94,7 +94,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nu-8x-uHm">
@@ -216,7 +216,7 @@
                         <viewControllerLayoutGuide type="bottom" id="R4d-pF-Iom"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="62r-L2-cKb">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="El juego es simple:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSZ-Xq-YgT">
@@ -316,7 +316,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4ZU-M8-5H5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8e7-FX-11a">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recordando es una aplicación que se enfoca en beneficiar la actividad cognitiva y emocional de la persona." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNd-Ux-5yO">
@@ -396,7 +396,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Jq-rB-s3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="U0v-bi-L1q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="885" y="963"/>
+            <point key="canvasLocation" x="1071" y="963"/>
         </scene>
         <!--About Legal View Controller-->
         <scene sceneID="yli-ah-eRp">
@@ -407,41 +407,38 @@
                         <viewControllerLayoutGuide type="bottom" id="Wmm-5l-gQS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uoo-k5-WeW">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXM-pb-3hv">
-                                <string key="text">Recordando ha sido desarrollado por estudiantes del Tecnológico de Monterrey durante el semestre Agosto Diciembre de 2016, como parte del curso Desarrollo de Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez Treviño.
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lXM-pb-3hv">
+                                <string key="text">Recordando ha sido desarrollado por estudiantes del Tecnológico de Monterrey durante el semestre Agosto Diciembre de 2016, como parte del curso Desarrollo de Aplicaciones para Dispositivos Móviles y asesorados por la maestra Yolanda Martínez Treviño.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGo-0V-9sB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nGo-0V-9sB">
                                 <string key="text">Desarrolladores:
 Melissa Treviño
 Bernardo Treviño
 Gerardo Tenorio</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recordando se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egD-OL-LSo">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recordando se distribuye como está de manera gratuita y se prohíbe su distribución y uso con fines de lucro." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="egD-OL-LSo">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gq-b1-Wiz">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gq-b1-Wiz">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Regresar"/>
                                 <connections>
                                     <segue destination="YSH-ZP-hdU" kind="unwind" unwindAction="unwindLegalWithSender:" id="BjW-ZH-Whe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consideraciones legales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61p-MW-mDv">
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="61p-MW-mDv" secondAttribute="height" multiplier="79:7" id="5XS-33-MwY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consideraciones legales" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="61p-MW-mDv">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -449,18 +446,24 @@ Gerardo Tenorio</string>
                         <color key="backgroundColor" red="0.93654745817184448" green="0.95655566453933716" blue="0.9814487099647522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="egD-OL-LSo" firstAttribute="top" secondItem="nGo-0V-9sB" secondAttribute="bottom" constant="20" id="30L-B1-drF"/>
-                            <constraint firstItem="1Gq-b1-Wiz" firstAttribute="width" secondItem="1Gq-b1-Wiz" secondAttribute="height" multiplier="31:15" id="4mj-XU-x1f"/>
                             <constraint firstItem="61p-MW-mDv" firstAttribute="top" secondItem="1Gq-b1-Wiz" secondAttribute="bottom" constant="20" id="6hx-hR-wp5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="egD-OL-LSo" secondAttribute="trailing" constant="20" id="A9R-Ki-qmU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nGo-0V-9sB" secondAttribute="trailing" constant="20" id="CFz-fz-57H"/>
-                            <constraint firstItem="nGo-0V-9sB" firstAttribute="top" secondItem="lXM-pb-3hv" secondAttribute="bottom" constant="5" id="Kdc-Bg-uN2"/>
+                            <constraint firstItem="1Gq-b1-Wiz" firstAttribute="height" secondItem="uoo-k5-WeW" secondAttribute="height" multiplier="4.5%" id="7dT-ST-ezL"/>
+                            <constraint firstItem="61p-MW-mDv" firstAttribute="width" secondItem="uoo-k5-WeW" secondAttribute="width" multiplier="50%" id="81M-4t-rgc"/>
+                            <constraint firstItem="1Gq-b1-Wiz" firstAttribute="width" secondItem="uoo-k5-WeW" secondAttribute="width" multiplier="16.5%" id="BAY-QG-p4D"/>
+                            <constraint firstItem="61p-MW-mDv" firstAttribute="height" secondItem="uoo-k5-WeW" secondAttribute="height" multiplier="3.2%" id="DeX-pb-PMf"/>
+                            <constraint firstItem="nGo-0V-9sB" firstAttribute="top" secondItem="lXM-pb-3hv" secondAttribute="bottom" constant="20" id="Kdc-Bg-uN2"/>
                             <constraint firstItem="egD-OL-LSo" firstAttribute="leading" secondItem="uoo-k5-WeW" secondAttribute="leadingMargin" constant="20" id="PS4-dI-7nV"/>
+                            <constraint firstItem="lXM-pb-3hv" firstAttribute="width" secondItem="uoo-k5-WeW" secondAttribute="width" multiplier="81%" id="ShB-2g-Vbi"/>
                             <constraint firstItem="1Gq-b1-Wiz" firstAttribute="top" secondItem="fIz-9J-mvh" secondAttribute="bottom" id="UUf-Bo-yzt"/>
+                            <constraint firstItem="egD-OL-LSo" firstAttribute="width" secondItem="uoo-k5-WeW" secondAttribute="width" multiplier="81%" id="XBB-8F-sfO"/>
                             <constraint firstItem="61p-MW-mDv" firstAttribute="leading" secondItem="uoo-k5-WeW" secondAttribute="leadingMargin" constant="15" id="Y6w-mY-Yad"/>
                             <constraint firstItem="lXM-pb-3hv" firstAttribute="top" secondItem="61p-MW-mDv" secondAttribute="bottom" constant="20" id="ZaP-oB-Juy"/>
                             <constraint firstItem="lXM-pb-3hv" firstAttribute="leading" secondItem="uoo-k5-WeW" secondAttribute="leadingMargin" constant="20" id="eYt-4h-UdZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lXM-pb-3hv" secondAttribute="trailing" constant="20" id="kfI-J2-WAK"/>
+                            <constraint firstItem="nGo-0V-9sB" firstAttribute="height" secondItem="uoo-k5-WeW" secondAttribute="height" multiplier="10%" id="fAW-lM-gl8"/>
+                            <constraint firstItem="nGo-0V-9sB" firstAttribute="width" secondItem="uoo-k5-WeW" secondAttribute="width" multiplier="30%" id="lff-yQ-pRY"/>
+                            <constraint firstItem="lXM-pb-3hv" firstAttribute="height" secondItem="uoo-k5-WeW" secondAttribute="height" multiplier="20%" id="qp4-wm-oVw"/>
                             <constraint firstItem="1Gq-b1-Wiz" firstAttribute="leading" secondItem="uoo-k5-WeW" secondAttribute="leadingMargin" id="vGq-Gr-pgD"/>
+                            <constraint firstItem="egD-OL-LSo" firstAttribute="height" secondItem="uoo-k5-WeW" secondAttribute="height" multiplier="7.6%" id="xzh-Q1-gNr"/>
                             <constraint firstItem="nGo-0V-9sB" firstAttribute="leading" secondItem="uoo-k5-WeW" secondAttribute="leadingMargin" constant="20" id="zgV-Hr-aZ2"/>
                         </constraints>
                     </view>
@@ -468,7 +471,7 @@ Gerardo Tenorio</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYL-NW-ggV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YSH-ZP-hdU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1400" y="963"/>
+            <point key="canvasLocation" x="1877.5999999999999" y="962.96851574212906"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="vHY-BZ-zlJ">
@@ -479,7 +482,7 @@ Gerardo Tenorio</string>
                         <viewControllerLayoutGuide type="bottom" id="gqv-ab-h7s"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="b2I-bt-PiX">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLK-kb-ZyR">
@@ -536,7 +539,7 @@ Gerardo Tenorio</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4k-Yq-Ab5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LJd-3k-p7y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-921" y="963"/>
+            <point key="canvasLocation" x="-1262" y="963"/>
         </scene>
         <!--Game Images View Controller-->
         <scene sceneID="eKU-h1-D4p">
@@ -547,7 +550,7 @@ Gerardo Tenorio</string>
                         <viewControllerLayoutGuide type="bottom" id="i6F-R5-Ojc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ALd-4q-swq">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph4-2W-fff">
