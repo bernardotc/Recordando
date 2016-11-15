@@ -24,6 +24,7 @@ class GameImagesViewController: UIViewController, UIPopoverPresentationControlle
     @IBOutlet weak var lblInstruction: UILabel!
     @IBOutlet weak var barBtnNext: UIBarButtonItem!
     
+    var categories: [Categoria] = []
     var generalCategory: Categoria!
     var images: [Imagen] = []
     var correctImage: Imagen!
@@ -31,6 +32,16 @@ class GameImagesViewController: UIViewController, UIPopoverPresentationControlle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if !categorias[0].usar {
+            for category in categorias {
+                if (category.usar) {
+                    categories.append(category)
+                }
+            }
+        } else {
+            categories = categorias
+        }
         
         viewContainer.isHidden = true
         lblInstruction.text = "Selecciona la imagen que no va de acuerdo con las otras tres."
@@ -53,11 +64,11 @@ class GameImagesViewController: UIViewController, UIPopoverPresentationControlle
     }
     
     func selectCategory() -> Categoria {
-        let categoryCount = categorias.count
+        let categoryCount = categories.count
         while true {
             let random = Int(arc4random_uniform(UInt32(categoryCount)))
-            if categorias[random].imagenes.count >= 3 {
-                return categorias[random]
+            if categories[random].imagenes.count >= 3 {
+                return categories[random]
             }
         }
     }
@@ -75,13 +86,13 @@ class GameImagesViewController: UIViewController, UIPopoverPresentationControlle
     }
     
     func getImageFromDifferentCategory() {
-        let categoryCount = categorias.count
+        let categoryCount = categories.count
         while images.count < 4 {
             let random = Int(arc4random_uniform(UInt32(categoryCount)))
-            if categorias[random].imagenes.count >= 1 {
-                if categorias[random].id != generalCategory.id {
-                    let index = Int(arc4random_uniform(UInt32(categorias[random].imagenes.count)))
-                    correctImage = categorias[random].imagenes[index]
+            if categories[random].imagenes.count >= 1 {
+                if categories[random].id != generalCategory.id {
+                    let index = Int(arc4random_uniform(UInt32(categories[random].imagenes.count)))
+                    correctImage = categories[random].imagenes[index]
                     images.append(correctImage)
                 }
             }
