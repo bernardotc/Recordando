@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34257C461DDB74FC00BA5697 /* AboutLegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34257C451DDB74FC00BA5697 /* AboutLegalViewController.swift */; };
 		A9BF71A01DB84DF700F4145F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF71931DB84D6B00F4145F /* Alamofire.framework */; };
 		A9BF71A11DB84DF700F4145F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF71931DB84D6B00F4145F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9BF71A91DB867F500F4145F /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BF71A81DB867F500F4145F /* Categoria.swift */; };
@@ -98,6 +99,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		34257C451DDB74FC00BA5697 /* AboutLegalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutLegalViewController.swift; sourceTree = "<group>"; };
 		A9BF71871DB84D6B00F4145F /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		A9BF71A81DB867F500F4145F /* Categoria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
 		A9BF71B11DB8680800F4145F /* Imagen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imagen.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				C272EAD61DAEEE120043D040 /* Main.storyboard */,
 				C223FAA71DCAF09F009C687D /* UploadViewController.swift */,
 				C2F7563B1DB865AD008F313F /* AboutViewController.swift */,
+				34257C451DDB74FC00BA5697 /* AboutLegalViewController.swift */,
 				C21C19F81DB8495B005196F8 /* HowToPlayViewController.swift */,
 				C272EAD91DAEEE120043D040 /* Assets.xcassets */,
 				C272EADB1DAEEE120043D040 /* LaunchScreen.storyboard */,
@@ -320,6 +323,7 @@
 				A9BF71A91DB867F500F4145F /* Categoria.swift in Sources */,
 				C21C19F91DB8495B005196F8 /* HowToPlayViewController.swift in Sources */,
 				C2F7563C1DB865AD008F313F /* AboutViewController.swift in Sources */,
+				34257C461DDB74FC00BA5697 /* AboutLegalViewController.swift in Sources */,
 				C21C19F71DB82C54005196F8 /* ImageInformationViewController.swift in Sources */,
 				C2050BFF1DB5A7E60058AF44 /* MenuViewController.swift in Sources */,
 			);
