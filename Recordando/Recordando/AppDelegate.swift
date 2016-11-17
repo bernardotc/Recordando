@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-var categorias: [Categoria] = []
+var categorias: [Categoria] = [Categoria(id: -1, nombre: "Todas")]
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
