@@ -12,6 +12,8 @@
 		A9BF71A11DB84DF700F4145F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF71931DB84D6B00F4145F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9BF71A91DB867F500F4145F /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BF71A81DB867F500F4145F /* Categoria.swift */; };
 		A9BF71B21DB8680800F4145F /* Imagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BF71B11DB8680800F4145F /* Imagen.swift */; };
+		A9DCC74B1DDEB50D0037AA48 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DCC74A1DDEB50D0037AA48 /* LaunchScreenViewController.swift */; };
+		A9DCC7541DDEB5B60037AA48 /* CategorySettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9DCC7531DDEB5B60037AA48 /* CategorySettingsTableViewCell.swift */; };
 		C2050BFF1DB5A7E60058AF44 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2050BFE1DB5A7E60058AF44 /* MenuViewController.swift */; };
 		C21C19F71DB82C54005196F8 /* ImageInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21C19F61DB82C54005196F8 /* ImageInformationViewController.swift */; };
 		C21C19F91DB8495B005196F8 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21C19F81DB8495B005196F8 /* HowToPlayViewController.swift */; };
@@ -103,6 +105,8 @@
 		A9BF71871DB84D6B00F4145F /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		A9BF71A81DB867F500F4145F /* Categoria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
 		A9BF71B11DB8680800F4145F /* Imagen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imagen.swift; sourceTree = "<group>"; };
+		A9DCC74A1DDEB50D0037AA48 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		A9DCC7531DDEB5B60037AA48 /* CategorySettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySettingsTableViewCell.swift; sourceTree = "<group>"; };
 		C2050BFE1DB5A7E60058AF44 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Recordando/MenuViewController.swift; sourceTree = "<group>"; };
 		C21C19F61DB82C54005196F8 /* ImageInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageInformationViewController.swift; path = Recordando/ImageInformationViewController.swift; sourceTree = "<group>"; };
 		C21C19F81DB8495B005196F8 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 		C272EAC61DAEEE110043D040 = {
 			isa = PBXGroup;
 			children = (
+				A9DCC74A1DDEB50D0037AA48 /* LaunchScreenViewController.swift */,
 				C223FAB01DCAF0CA009C687D /* SettingsViewController.swift */,
 				A9BF71871DB84D6B00F4145F /* Alamofire.xcodeproj */,
 				C21C19F61DB82C54005196F8 /* ImageInformationViewController.swift */,
@@ -172,6 +177,7 @@
 			children = (
 				C272EAD21DAEEE120043D040 /* AppDelegate.swift */,
 				C272EAD61DAEEE120043D040 /* Main.storyboard */,
+				A9DCC7531DDEB5B60037AA48 /* CategorySettingsTableViewCell.swift */,
 				C223FAA71DCAF09F009C687D /* UploadViewController.swift */,
 				C2F7563B1DB865AD008F313F /* AboutViewController.swift */,
 				C21C19F81DB8495B005196F8 /* HowToPlayViewController.swift */,
@@ -319,6 +325,7 @@
 				A9BF71B21DB8680800F4145F /* Imagen.swift in Sources */,
 				C223FAA81DCAF09F009C687D /* UploadViewController.swift in Sources */,
 				C278649B1DB5B53E0051DEC6 /* GameImagesViewController.swift in Sources */,
+				A9DCC7541DDEB5B60037AA48 /* CategorySettingsTableViewCell.swift in Sources */,
 				C223FAB11DCAF0CA009C687D /* SettingsViewController.swift in Sources */,
 				A9033A291DCB2260005E9458 /* netData.swift in Sources */,
 				C272EAD31DAEEE120043D040 /* AppDelegate.swift in Sources */,
@@ -326,6 +333,7 @@
 				C21C19F91DB8495B005196F8 /* HowToPlayViewController.swift in Sources */,
 				C2F7563C1DB865AD008F313F /* AboutViewController.swift in Sources */,
 				C21C19F71DB82C54005196F8 /* ImageInformationViewController.swift in Sources */,
+				A9DCC74B1DDEB50D0037AA48 /* LaunchScreenViewController.swift in Sources */,
 				C2050BFF1DB5A7E60058AF44 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
