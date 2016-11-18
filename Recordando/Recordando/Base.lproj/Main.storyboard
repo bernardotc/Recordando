@@ -25,7 +25,7 @@
                                     <segue destination="nfy-am-Rs9" kind="unwind" unwindAction="unwindUploadWithSender:" id="Sh0-WN-TBP"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="huK-1C-bgd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo_sin_fondo" translatesAutoresizingMaskIntoConstraints="NO" id="huK-1C-bgd">
                                 <frame key="frameInset" minX="86" minY="57" width="207" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -67,7 +67,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Seleccionar Foto"/>
                                 <connections>
-                                    <action selector="choosePhotoWithSender:" destination="yty-LZ-IUK" eventType="touchUpInside" id="hbV-YG-92K"/>
+                                    <action selector="pickPhotoWithSender:" destination="yty-LZ-IUK" eventType="touchUpInside" id="t4w-Ue-Ky7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,7 +75,6 @@
                     </view>
                     <connections>
                         <outlet property="imageUserPhoto" destination="huK-1C-bgd" id="ERg-2a-SrE"/>
-                        <outlet property="imageView" destination="huK-1C-bgd" id="3Zx-MX-ACe"/>
                         <outlet property="pickerCategory" destination="bft-fq-Nc5" id="HHH-L9-ZCB"/>
                         <outlet property="textDescription" destination="B2k-LO-Lkc" id="aNi-Fi-WbH"/>
                     </connections>
@@ -180,20 +179,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KK-7g-6QC">
-                                <frame key="frameInset" minX="292" minY="629" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Subir foto"/>
-                                <connections>
-                                    <segue destination="yty-LZ-IUK" kind="presentation" id="hx9-Pt-NLA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2l-XY-A4K">
                                 <frame key="frameInset" minX="16" minY="629" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Configuración"/>
                                 <connections>
                                     <segue destination="wbj-ZH-caU" kind="presentation" id="xWG-b7-6Yp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KK-7g-6QC">
+                                <frame key="frameInset" minX="182" minY="61" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Subir foto"/>
+                                <connections>
+                                    <segue destination="yty-LZ-IUK" kind="presentation" id="hx9-Pt-NLA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -605,7 +604,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c6K-49-HEK" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qCb-H0-Khg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qCb-H0-Khg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

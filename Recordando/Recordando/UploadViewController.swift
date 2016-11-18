@@ -10,10 +10,12 @@ import UIKit
 import Alamofire
 
 class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
-
+    
     @IBOutlet weak var imageUserPhoto: UIImageView!
     @IBOutlet weak var pickerCategory: UIPickerView!
     @IBOutlet weak var textDescription: UITextView!
+    
+    let picker = UIImagePickerController()
     
     var currentPickerText: String = ""
     
@@ -21,13 +23,15 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        picker.delegate = self
+        
         self.pickerCategory.delegate = self
         self.pickerCategory.dataSource = self
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -35,10 +39,6 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     
     
     //MARK: - Alamofire Upload Functions
-    @IBAction func choosePhoto(sender: AnyObject) {
-        
-        pickPhoto(sender: sender)
-    }
     
     @IBAction func uploadBtn(sender: AnyObject) {
         
@@ -47,7 +47,7 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         let imageSelected: UIImage = imageUserPhoto.image!
         let imageData = UIImageJPEGRepresentation(imageSelected, 0.9)
         let base64String = imageData?.base64EncodedString() // encode the image
-
+        
         let sUserDescription = textDescription.text
         
         let parameters: Parameters = [
@@ -56,61 +56,87 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
             "image": base64String,
             "description": sUserDescription
         ]
-        
         Alamofire.request("35.160.114.150/recordando/controller.php", method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { response in
             
         }
-
+        
     }
     
-    
+    func noCamera(){
+        let alertVC = UIAlertController(
+            title: "No Camera",
+            message: "Sorry, this device has no camera",
+            preferredStyle: .alert)
+        let okAction = UIAlertAction(
+            title: "OK",
+            style:.default,
+            handler: nil)
+        alertVC.addAction(okAction)
+        present(
+            alertVC,
+            animated: true,
+            completion: nil)
+    }
     
     //MARK: - Camera and Gallery
-    
-    func pickPhoto(sender: AnyObject) {
+    @IBAction func pickPhoto(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             showPhotoMenu(sender: sender)
         } else {
-            choosePhotoFromLibrary()
+            photofromLibrary()
         }
     }
     
-    func takePhotoWithCamera() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .camera
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = true
-        present(imagePicker, animated: true, completion: nil)
+    
+    func shootPhoto(){
+        picker.allowsEditing = false
+        picker.sourceType = UIImagePickerControllerSourceType.camera
+        picker.cameraCaptureMode = .photo
+        picker.modalPresentationStyle = .fullScreen
+        present(picker,animated: true,completion: nil)
     }
     
-    func choosePhotoFromLibrary() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = true
-        present(imagePicker, animated: true, completion: nil)
-    }
     
     func showPhotoMenu(sender: AnyObject) {
-    
+        
         let alertController = UIAlertController(title: nil, message: nil,preferredStyle: .actionSheet)
-    
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-    
+        
         alertController.addAction(cancelAction)
-    
-        let takePhotoAction = UIAlertAction(title: "Take Photo",style: .default, handler: { _ in self.takePhotoWithCamera()})
-    
+        
+        let takePhotoAction = UIAlertAction(title: "Take Photo",style: .default, handler: { _ in self.shootPhoto()})
+        
         alertController.addAction(takePhotoAction)
-    
-        let chooseFromLibraryAction = UIAlertAction(title:"Choose From Library", style: .default, handler:{ _ in self.choosePhotoFromLibrary()})
-    
+        
+        let chooseFromLibraryAction = UIAlertAction(title:"Choose From Library", style: .default, handler:{ _ in self.photofromLibrary()})
+        
         alertController.addAction(chooseFromLibraryAction)
-    
+        
         present(alertController, animated: true, completion: nil)
     }
-
     
+    
+    func photofromLibrary() {
+        
+        picker.allowsEditing = false
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        present(picker, animated: true, completion: nil)
+    }
+    
+    //MARK: - Delegates
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : AnyObject])
+    {
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+        imageUserPhoto.contentMode = .scaleAspectFit //3
+        imageUserPhoto.image = chosenImage //4
+        dismiss(animated:true, completion: nil) //5
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
     
     // MARK: - Picker Control Functions
     
@@ -128,15 +154,15 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
