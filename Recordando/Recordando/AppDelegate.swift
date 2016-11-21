@@ -24,7 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        alamofireManager.request("http://35.160.114.150/recordando/model.php").validate().responseJSON { response in
+        
+        let parameters: Parameters = [
+            "action": "DOWNLOAD_IMAGES"
+        ]
+        
+        alamofireManager.request("http://35.160.114.150/recordando/model.php", method: .post, parameters: parameters).validate().responseJSON { response in
             switch response.result {
             case .success(let JSON):
                 self.loadData(JSON as! NSDictionary)
