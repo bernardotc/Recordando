@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7RN-Qa-UoU">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7RN-Qa-UoU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -46,14 +46,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBx-Zw-PVU">
-                                <frame key="frameInset" minX="134" minY="594" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Subir Foto"/>
-                                <connections>
-                                    <action selector="uploadBtnWithSender:" destination="yty-LZ-IUK" eventType="touchUpInside" id="Bbo-Yn-lZc"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Ingresar tu descripción..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B2k-LO-Lkc">
                                 <frame key="frameInset" minX="68" minY="444" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -71,6 +63,14 @@
                                 <state key="normal" title="Seleccionar Foto"/>
                                 <connections>
                                     <action selector="pickPhotoWithSender:" destination="yty-LZ-IUK" eventType="touchUpInside" id="t4w-Ue-Ky7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBx-Zw-PVU">
+                                <frame key="frameInset" minX="16" minY="283" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Subir Foto"/>
+                                <connections>
+                                    <action selector="uploadBtnWithSender:" destination="yty-LZ-IUK" eventType="touchUpInside" id="Bbo-Yn-lZc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -728,7 +728,7 @@ Gerardo Tenorio</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c6K-49-HEK" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qCb-H0-Khg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qCb-H0-Khg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
