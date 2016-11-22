@@ -125,9 +125,9 @@ class GameImagesViewController: UIViewController, UIPopoverPresentationControlle
         btnLeftBottomAnswer.alpha = 0.4
         btnRightBottomAnswer.alpha = 0.4
         if (sender == btnCorrectAnswer) {
-            lblIsCorrect.text = "Correcto!"
+            lblIsCorrect.text = "¡Correcto!"
         } else {
-            lblIsCorrect.text = "Incorrecto!"
+            lblIsCorrect.text = "Incorrecto."
         }
         lblCategory.text = "La categoría era: \(generalCategory.nombre!)."
     }
