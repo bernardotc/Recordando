@@ -18,8 +18,11 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     let picker = UIImagePickerController()
     
     var currentPickerText: String = ""
+    var bFotoSelected: Bool = false;
     
     var sCategoryTemporal: [String] = ["Música de Época", "Objetos de Época", "Juguetes", "Comerciales", "Hechos Históricos", "Monumentos Mexicanos", "Arte", "Cinematografía", "Comida Mexicana", "Paisaje"]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,9 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         self.pickerCategory.dataSource = self
         
         // Do any additional setup after loading the view.
+    }
+    @IBAction func removeKeyboard(_ sender: AnyObject) {
+        view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,26 +54,36 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         let imageData = UIImageJPEGRepresentation(imageSelected, 0.9)
         let base64String = imageData!.base64EncodedString() // encode the image
         
-        print(base64String)
-        
         let sUserDescription = textDescription.text!
         
-        let parameters: Parameters = [
-            "category": iCategorySelected,
-            "action": "UPLOAD_IMAGE",
-            "image": base64String,
-            "description": sUserDescription
-        ]
-        Alamofire.request("http://35.160.114.150/recordando/model.php", method: .post, parameters: parameters).validate().responseJSON { response in
-            switch response.result {
-            case .success(let JSON):
-                print("success")
-                break
-            case .failure(let error):
-                print(error)
-            }
+        if sUserDescription == "" || bFotoSelected == false {
+            let alert = UIAlertController(title: "Alerta", message: "Favor de cargar todos los datos.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continuar", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
 
+        }
+        else {
+            let parameters: Parameters = [
+                "category": iCategorySelected,
+                "action": "UPLOAD_IMAGE",
+                "image": base64String,
+                "description": sUserDescription
+            ]
             
+            Alamofire.request("http://35.160.114.150/recordando/model.php", method: .post, parameters: parameters).validate().responseJSON { response in
+                switch response.result {
+                case .success(_):
+                    let alert = UIAlertController(title: "Alerta", message: "Imagen cargada con exito", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Continuar", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    break
+                case .failure(_):
+                    let alert = UIAlertController(title: "Alerta", message: "La imagen no pudo ser cargada", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Continuar", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    break
+                }
+            }
         }
         
     }
@@ -133,6 +149,7 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         picker.sourceType = .photoLibrary
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(picker, animated: true, completion: nil)
+        bFotoSelected = true;
     }
     
     //MARK: - Delegates
@@ -143,6 +160,7 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         imageUserPhoto.contentMode = .scaleAspectFit //3
         imageUserPhoto.image = chosenImage //4
         dismiss(animated:true, completion: nil) //5
+        bFotoSelected = true;
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
