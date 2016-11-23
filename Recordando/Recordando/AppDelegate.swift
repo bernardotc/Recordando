@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
+    // Set alamogfire
     private let alamofireManager: Alamofire.SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForResource = 60
@@ -25,10 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // Request alamofire download_images from server
         let parameters: Parameters = [
             "action": "DOWNLOAD_IMAGES"
         ]
         
+        // Get JSON response from server
         alamofireManager.request("http://35.160.114.150/recordando/model.php", method: .post, parameters: parameters).validate().responseJSON { response in
             switch response.result {
             case .success(let JSON):
@@ -42,15 +45,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    // Parse the JSON of the server
     func loadData(_ response: NSDictionary) {
         if (response["status"] as? String == "SUCCESS") {
             if let categories = response["categories"] as? [AnyObject] {
                 for object in categories {
+                    // Create category
                     let category = object as! NSDictionary
                     let newCategory = Categoria(id: category["id"] as! Int, nombre: category["categoryName"] as! String)
                     
+                    // Create image list
                     var images: [Imagen] = []
                     
+                    // Append image from the category received.
                     for object2 in category["images"] as! [AnyObject] {
                         let image = object2 as! NSDictionary
                         let newImage = Imagen(id: image["id"] as! Int, fileName: image["imageName"] as! String, descripcion: image["description"] as! String)
