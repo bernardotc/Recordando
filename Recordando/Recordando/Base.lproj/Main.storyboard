@@ -402,7 +402,7 @@
                             <constraint firstItem="AWe-HA-ySG" firstAttribute="leading" secondItem="8e7-FX-11a" secondAttribute="leadingMargin" id="axv-qv-uan"/>
                             <constraint firstItem="cJR-jT-YCg" firstAttribute="top" secondItem="FXK-E2-hux" secondAttribute="bottom" constant="10" id="dXc-TQ-q4C"/>
                             <constraint firstItem="AWe-HA-ySG" firstAttribute="top" secondItem="3Jf-ut-5x7" secondAttribute="bottom" id="dpx-2W-ZyK"/>
-                            <constraint firstItem="SkW-sJ-KO6" firstAttribute="centerX" secondItem="8e7-FX-11a" secondAttribute="centerX" id="f9m-2o-2f0"/>
+                            <constraint firstItem="SkW-sJ-KO6" firstAttribute="centerX" secondItem="8e7-FX-11a" secondAttribute="centerX" constant="-20" id="f9m-2o-2f0"/>
                             <constraint firstItem="AMf-WZ-ler" firstAttribute="top" secondItem="cJR-jT-YCg" secondAttribute="bottom" constant="20" id="fQv-Mi-Nzb"/>
                             <constraint firstItem="NNd-Ux-5yO" firstAttribute="height" secondItem="8e7-FX-11a" secondAttribute="height" multiplier="7%" id="iPO-IK-3NT"/>
                             <constraint firstItem="cJR-jT-YCg" firstAttribute="centerX" secondItem="8e7-FX-11a" secondAttribute="centerX" id="lTQ-6Y-cnP"/>
@@ -415,7 +415,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Jq-rB-s3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="U0v-bi-L1q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1069.5652173913045" y="961.95652173913049"/>
+            <point key="canvasLocation" x="1069.53125" y="961.52343749999989"/>
         </scene>
         <!--About Legal View Controller-->
         <scene sceneID="yli-ah-eRp">
@@ -577,28 +577,24 @@ Gerardo Tenorio</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph4-2W-fff">
-                                <color key="backgroundColor" red="0.0" green="0.21769934699999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="chooseAnswer:" destination="5ed-3v-lOi" eventType="touchUpInside" id="0Uc-RX-8SJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by0-nw-LQN">
-                                <color key="backgroundColor" red="0.0" green="0.21769934699999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="chooseAnswer:" destination="5ed-3v-lOi" eventType="touchUpInside" id="yJU-EX-3Lo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKN-x3-P9J">
-                                <color key="backgroundColor" red="0.0" green="0.21769934699999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="chooseAnswer:" destination="5ed-3v-lOi" eventType="touchUpInside" id="HMk-S3-IFP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lj0-jy-THf">
-                                <color key="backgroundColor" red="0.0" green="0.21769934699999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="chooseAnswer:" destination="5ed-3v-lOi" eventType="touchUpInside" id="Eiy-1a-db0"/>
