@@ -348,7 +348,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recordando es una aplicación que se enfoca en beneficiar la actividad cognitiva y emocional de la persona." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NNd-Ux-5yO">
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Sube tus recuerdos!" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FXK-E2-hux">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -363,7 +368,13 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_sin_fondo" translatesAutoresizingMaskIntoConstraints="NO" id="8rY-QT-SZr"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Versión   1.0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkW-sJ-KO6">
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cJR-jT-YCg">
+                                <string key="text">Sube una fotografía a la aplicación, siempre y cuando sean fotos con permisos de uso. ¡No olvides agregar la categoría a la que pertenece tu fotografía!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -377,18 +388,26 @@
                         <color key="backgroundColor" red="0.95615357160000003" green="0.97616487740000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NNd-Ux-5yO" firstAttribute="width" secondItem="8e7-FX-11a" secondAttribute="width" multiplier="0.81" id="01L-o2-xCM"/>
+                            <constraint firstItem="cJR-jT-YCg" firstAttribute="width" secondItem="8e7-FX-11a" secondAttribute="width" multiplier="84.5%" id="0FX-35-oX4"/>
+                            <constraint firstItem="FXK-E2-hux" firstAttribute="height" secondItem="8e7-FX-11a" secondAttribute="height" multiplier="3.8%" id="8rF-X8-YG8"/>
                             <constraint firstItem="NNd-Ux-5yO" firstAttribute="top" secondItem="8rY-QT-SZr" secondAttribute="bottom" constant="10" id="Bbv-08-dcE"/>
                             <constraint firstItem="NNd-Ux-5yO" firstAttribute="centerX" secondItem="8e7-FX-11a" secondAttribute="centerX" id="HI9-UP-spY"/>
                             <constraint firstItem="8rY-QT-SZr" firstAttribute="centerX" secondItem="8e7-FX-11a" secondAttribute="centerX" id="Hjo-yW-WjZ"/>
                             <constraint firstItem="8rY-QT-SZr" firstAttribute="width" secondItem="8e7-FX-11a" secondAttribute="width" multiplier="33%" id="LrA-W8-G4k"/>
                             <constraint firstItem="AMf-WZ-ler" firstAttribute="centerX" secondItem="8e7-FX-11a" secondAttribute="centerX" id="MFt-6B-fYx"/>
                             <constraint firstItem="8rY-QT-SZr" firstAttribute="height" secondItem="8e7-FX-11a" secondAttribute="height" multiplier="24.4%" id="PfB-gE-Foz"/>
+                            <constraint firstItem="FXK-E2-hux" firstAttribute="leading" secondItem="8e7-FX-11a" secondAttribute="leadingMargin" constant="20" id="PqB-V7-J0A"/>
+                            <constraint firstItem="FXK-E2-hux" firstAttribute="width" secondItem="8e7-FX-11a" secondAttribute="width" multiplier="31.6%" constant="46.175999999999988" id="ShW-Qy-cz4"/>
+                            <constraint firstItem="FXK-E2-hux" firstAttribute="top" secondItem="NNd-Ux-5yO" secondAttribute="bottom" constant="100" id="Unk-eg-C6K"/>
                             <constraint firstItem="AWe-HA-ySG" firstAttribute="leading" secondItem="8e7-FX-11a" secondAttribute="leadingMargin" id="axv-qv-uan"/>
+                            <constraint firstItem="cJR-jT-YCg" firstAttribute="top" secondItem="FXK-E2-hux" secondAttribute="bottom" constant="10" id="dXc-TQ-q4C"/>
                             <constraint firstItem="AWe-HA-ySG" firstAttribute="top" secondItem="3Jf-ut-5x7" secondAttribute="bottom" id="dpx-2W-ZyK"/>
                             <constraint firstItem="SkW-sJ-KO6" firstAttribute="centerX" secondItem="8e7-FX-11a" secondAttribute="centerX" id="f9m-2o-2f0"/>
+                            <constraint firstItem="AMf-WZ-ler" firstAttribute="top" secondItem="cJR-jT-YCg" secondAttribute="bottom" constant="20" id="fQv-Mi-Nzb"/>
                             <constraint firstItem="NNd-Ux-5yO" firstAttribute="height" secondItem="8e7-FX-11a" secondAttribute="height" multiplier="7%" id="iPO-IK-3NT"/>
+                            <constraint firstItem="cJR-jT-YCg" firstAttribute="centerX" secondItem="8e7-FX-11a" secondAttribute="centerX" id="lTQ-6Y-cnP"/>
                             <constraint firstItem="SkW-sJ-KO6" firstAttribute="top" secondItem="NNd-Ux-5yO" secondAttribute="bottom" constant="50" id="oIX-Jp-YyG"/>
-                            <constraint firstItem="4ZU-M8-5H5" firstAttribute="top" secondItem="AMf-WZ-ler" secondAttribute="bottom" constant="130" id="tgr-Oi-pOa"/>
+                            <constraint firstItem="cJR-jT-YCg" firstAttribute="height" secondItem="8e7-FX-11a" secondAttribute="height" multiplier="8.3%" id="rwR-X3-6Ug"/>
                             <constraint firstItem="8rY-QT-SZr" firstAttribute="top" secondItem="3Jf-ut-5x7" secondAttribute="bottom" constant="40" id="yYK-Ns-KEk"/>
                         </constraints>
                     </view>
@@ -396,7 +415,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Jq-rB-s3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="U0v-bi-L1q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1070.3125" y="962.69531249999989"/>
+            <point key="canvasLocation" x="1069.5652173913045" y="961.95652173913049"/>
         </scene>
         <!--About Legal View Controller-->
         <scene sceneID="yli-ah-eRp">
@@ -495,10 +514,10 @@ Gerardo Tenorio</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Tgb-vN-oUC" customClass="CategorySettingsTableViewCell" customModule="Recordando" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="372" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="373" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tgb-vN-oUC" id="YJM-Do-8pW">
-                                            <frame key="frameInset" width="372" height="43"/>
+                                            <frame key="frameInset" width="372.66666666666663" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvE-KA-M5j">
