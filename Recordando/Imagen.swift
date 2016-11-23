@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// Clase imagen que contiene informacion sobre la imagen y la imagen en si
 class Imagen: CustomStringConvertible {
     
     var id: Int?
