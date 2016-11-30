@@ -20,9 +20,7 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     var currentPickerText: String = ""
     var bFotoSelected: Bool = false;
     
-    var sCategoryTemporal: [String] = ["Música de Época", "Objetos de Época", "Juguetes", "Comerciales", "Hechos Históricos", "Monumentos Mexicanos", "Arte", "Cinematografía", "Comida Mexicana", "Paisaje"]
-    
-    
+    var sCategoryTemporal: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +30,17 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         self.pickerCategory.delegate = self
         self.pickerCategory.dataSource = self
         
+        // Set all categories' name to a temporal array
+        for category in categorias {
+            if category.nombre != "Todas" {
+                sCategoryTemporal.append(category.nombre!)
+            }
+        }
+        
         // Do any additional setup after loading the view.
     }
+    
+    // Remove Keyboard
     @IBAction func removeKeyboard(_ sender: AnyObject) {
         view.endEditing(true)
     }
@@ -50,19 +57,24 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         
         let iCategorySelected: Int = pickerCategory.selectedRow(inComponent: 0) + 1
         
+        // Get image
         let imageSelected: UIImage = imageUserPhoto.image!
+        // Compress image data
         let imageData = UIImageJPEGRepresentation(imageSelected, 0.9)
         let base64String = imageData!.base64EncodedString() // encode the image
         
         let sUserDescription = textDescription.text!
         
+        // Alert when some data is missing
         if sUserDescription == "" || bFotoSelected == false {
-            let alert = UIAlertController(title: "Alerta", message: "Favor de cargar todos los datos.", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Atención", message: "Favor de cargar todos los datos.", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Continuar", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
 
         }
+        // All data is complete for upload
         else {
+            // Set upload parametes for alamofire
             let parameters: Parameters = [
                 "category": iCategorySelected,
                 "action": "UPLOAD_IMAGE",
@@ -70,15 +82,18 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
                 "description": sUserDescription
             ]
             
+            // Start request
             Alamofire.request("http://35.160.114.150/recordando/model.php", method: .post, parameters: parameters).validate().responseJSON { response in
                 switch response.result {
+                // If the image was uploaded succesfully
                 case .success(_):
-                    let alert = UIAlertController(title: "Alerta", message: "Imagen cargada con exito", preferredStyle: UIAlertControllerStyle.alert)
+                    let alert = UIAlertController(title: "Éxito", message: "Imagen cargada con exitosamente.", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Continuar", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                     break
+                // If there was an error in the upload.
                 case .failure(_):
-                    let alert = UIAlertController(title: "Alerta", message: "La imagen no pudo ser cargada", preferredStyle: UIAlertControllerStyle.alert)
+                    let alert = UIAlertController(title: "Error", message: "La imagen no pudo ser cargada.", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Continuar", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                     break
@@ -88,6 +103,7 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         
     }
     
+    // Helper method to alert that there is no camera.
     func noCamera(){
         let alertVC = UIAlertController(
             title: "No Camera",
@@ -105,6 +121,7 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     }
     
     //MARK: - Camera and Gallery
+    // Access photo library
     @IBAction func pickPhoto(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             showPhotoMenu(sender: sender)
@@ -113,7 +130,7 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         }
     }
     
-    
+    // Take picture
     func shootPhoto(){
         picker.allowsEditing = false
         picker.sourceType = UIImagePickerControllerSourceType.camera
@@ -122,7 +139,7 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         present(picker,animated: true,completion: nil)
     }
     
-    
+    // When you select photo, this menu will appear with the following options
     func showPhotoMenu(sender: AnyObject) {
         
         let alertController = UIAlertController(title: nil, message: nil,preferredStyle: .actionSheet)
@@ -143,6 +160,7 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     }
     
     
+    // Shows the library of photos in the device
     func photofromLibrary() {
         
         picker.allowsEditing = false

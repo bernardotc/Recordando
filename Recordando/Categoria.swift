@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Clase categoriia que contiene la lista de imagenes.
 class Categoria {
     
     var id: Int?

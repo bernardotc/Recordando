@@ -17,11 +17,12 @@ class LaunchScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Shows the team logo for 1.5 seconds. It hides some outlets.
         lblLoading.isHidden = true
         activityIndicator.isHidden = true
         
         timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(loading), userInfo: nil, repeats: false);
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,6 +30,7 @@ class LaunchScreenViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Shows the loading screen. Sets image and timer to 3 seconds.
     func loading() {
         imageView.image = UIImage(named: "Logo_sin_fondo")
         lblLoading.isHidden = false
