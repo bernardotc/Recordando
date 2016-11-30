@@ -54,6 +54,8 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     //MARK: - Alamofire Upload Functions
     
     @IBAction func uploadBtn(sender: AnyObject) {
+        let button = sender as! UIButton
+        button.isEnabled = false
         
         let iCategorySelected: Int = pickerCategory.selectedRow(inComponent: 0) + 1
         
@@ -88,13 +90,17 @@ class UploadViewController: UIViewController,UIImagePickerControllerDelegate,UIN
                 // If the image was uploaded succesfully
                 case .success(_):
                     let alert = UIAlertController(title: "Éxito", message: "Imagen cargada con exitosamente.", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Continuar", style: UIAlertActionStyle.default, handler: nil))
+                    alert.addAction(UIAlertAction(title: "Continuar", style: UIAlertActionStyle.default, handler: {(UIAlertAction)-> Void in
+                        button.isEnabled = true
+                    }))
                     self.present(alert, animated: true, completion: nil)
                     break
                 // If there was an error in the upload.
                 case .failure(_):
                     let alert = UIAlertController(title: "Error", message: "La imagen no pudo ser cargada.", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Continuar", style: UIAlertActionStyle.default, handler: nil))
+                    alert.addAction(UIAlertAction(title: "Continuar", style: UIAlertActionStyle.default, handler: {(UIAlertAction)-> Void in
+                        button.isEnabled = true
+                    }))
                     self.present(alert, animated: true, completion: nil)
                     break
                 }
