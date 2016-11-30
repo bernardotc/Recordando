@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        setStoryboard()
         return true
     }
     
@@ -86,6 +87,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    // MARK: - Métodos para cargar varios storyboards
+    
+    // Elegir el storyboard a desplegar
+    func setStoryboard() {
+        let storyboard : UIStoryboard = self.grabStoryboard()
+        self.setInitialScreen(storyboard)
+    }
+    
+    // Decide el storyboard a usar en base al tamaño de la pantalla
+    func grabStoryboard() -> UIStoryboard {
+        
+        // Obtiene el tamaño
+        let screenHeight : Int = Int(UIScreen.main.bounds.size.height)
+        
+        var storyboard : UIStoryboard
+        print(screenHeight)
+        
+        switch (screenHeight) {
+        case 568:
+            storyboard = UIStoryboard(name: "Main", bundle: nil)
+            break;
+            
+        case 667:
+            storyboard = UIStoryboard(name: "Main", bundle: nil)
+            break;
+            
+        case 736:
+            storyboard = UIStoryboard(name: "Main", bundle: nil)
+            break;
+            
+        case 1024:
+            storyboard = UIStoryboard(name: "MainiPad", bundle: nil)
+            break;
+            
+        case 1366:
+            storyboard = UIStoryboard(name: "MainiPad", bundle: nil)
+            break;
+            
+        default:
+            storyboard = UIStoryboard(name: "Main", bundle: nil)
+            break
+        }
+        
+        return storyboard
+    }
+    
+    // Decide la pantalla principal de la aplicación.
+    // Por ejemplo si el usuario ya había hecho login empieza en cierta pantalla,
+    // y si no entonces presenta la pantalla de login
+    func setInitialScreen( _ storyboard : UIStoryboard) {
+        var initViewController : UIViewController
+        
+        initViewController = storyboard.instantiateViewController(withIdentifier: "First")
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = initViewController
+        self.window?.makeKeyAndVisible()
+    }
     
 }
 

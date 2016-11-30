@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34257C461DDB74FC00BA5697 /* AboutLegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34257C451DDB74FC00BA5697 /* AboutLegalViewController.swift */; };
+		34A379C91DEE4E7500F27A02 /* MainiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A379C71DEE4E7500F27A02 /* MainiPad.storyboard */; };
 		A9033A291DCB2260005E9458 /* netData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9033A281DCB2260005E9458 /* netData.swift */; };
 		A9BF71A01DB84DF700F4145F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF71931DB84D6B00F4145F /* Alamofire.framework */; };
 		A9BF71A11DB84DF700F4145F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF71931DB84D6B00F4145F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -103,6 +104,7 @@
 
 /* Begin PBXFileReference section */
 		34257C451DDB74FC00BA5697 /* AboutLegalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutLegalViewController.swift; sourceTree = "<group>"; };
+		34A379C81DEE4E7500F27A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainiPad.storyboard; sourceTree = "<group>"; };
 		A9033A281DCB2260005E9458 /* netData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = netData.swift; sourceTree = "<group>"; };
 		A9BF71871DB84D6B00F4145F /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		A9BF71A81DB867F500F4145F /* Categoria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				C272EAD21DAEEE120043D040 /* AppDelegate.swift */,
+				34A379C71DEE4E7500F27A02 /* MainiPad.storyboard */,
 				C272EAD61DAEEE120043D040 /* Main.storyboard */,
 				A9DCC7531DDEB5B60037AA48 /* CategorySettingsTableViewCell.swift */,
 				C223FAA71DCAF09F009C687D /* UploadViewController.swift */,
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C272EADD1DAEEE120043D040 /* LaunchScreen.storyboard in Resources */,
+				34A379C91DEE4E7500F27A02 /* MainiPad.storyboard in Resources */,
 				C272EADA1DAEEE120043D040 /* Assets.xcassets in Resources */,
 				C272EAD81DAEEE120043D040 /* Main.storyboard in Resources */,
 			);
@@ -353,6 +357,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		34A379C71DEE4E7500F27A02 /* MainiPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34A379C81DEE4E7500F27A02 /* Base */,
+			);
+			name = MainiPad.storyboard;
+			sourceTree = "<group>";
+		};
 		C272EAD61DAEEE120043D040 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
